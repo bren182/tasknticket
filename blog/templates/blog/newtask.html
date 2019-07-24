@@ -1,0 +1,30 @@
+{% extends "blog/base.html" %}
+{% load static %}
+{% block selectedtasks %}
+<img src="{% static "blog/static/images/nav2.jpg" %}" class="nav-image" >
+{% endblock %}
+
+{% block content %}
+<div class="container">
+<form action="/tasks/newtask/" method="post">
+    {% csrf_token %}
+    {% for error in form.non_field_errors %}
+                     <div class="form-group has-errors text-danger small">
+                         {{error}}
+                     </div>
+                     {% endfor %}
+                     {% for field in form %}
+                     <div class="form-group has-errors text-danger small">
+                         {{field.errors}}
+                     </div>
+                     <div class="form-group has-errors text-danger small">
+                     </div>
+                     <div class="form-group">
+                         <div class="col col-sm-4 ">{{field.name}}</div>
+                         <div class="col col-sm-8">{{field}}</div>
+                     </div>
+                     {% endfor %}
+    <input class="btn btn-success" type="submit" value="Submit" />
+</form>
+</div>
+{% endblock %}

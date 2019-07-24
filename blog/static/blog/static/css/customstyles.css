@@ -1,0 +1,138 @@
+.icon {
+  width: 50px;
+  height: 50px;
+}
+
+
+.nav-image {
+  height:inherit;
+  width:inherit;
+}
+
+.task-nav {
+  border-style: double;
+  border-color: rgb(34,139,34);
+}
+
+.task-detail {
+  border-style: solid;
+  border-color: rgb(34,139,34);
+
+}
+
+.task-nav-header {
+    text-align: left;
+    color: rgb(34,139,34);
+}
+
+.task-detail-header  {
+    text-align: center;
+    color: rgb(34,139,34);
+}
+
+
+header, footer {
+    padding: 1em;
+    color: white
+    clear: left;
+    text-align: center;
+    border-style: double;
+    background-color: black;
+    border-color: rgb(34,139,34);
+    margin-bottom: 20px;
+
+}
+
+body {
+  background-color: black;
+}
+
+.bgimage {
+  opacity: 0.40;
+  position: absolute;
+  border-color: red;
+  height: 100%;
+  width:100%;
+  z-index: -5;
+}
+
+ul, a, p, h1, h2, h3{
+  list-style-type: none;
+  color: #3AD83A;
+  font-family: Lucida Console;
+}
+
+h6 {
+    color: #2EB62E;
+    font-family: Lucida Console;
+}
+
+h2 {
+  border-style: double;
+  border-color: rgb(34,139,34);
+  padding: 0;
+  margin: 0;
+}
+
+h3 {
+    font-size: 18px;
+}
+
+/* unvisited link */
+a:link {
+    color: #2EB62E;
+}
+
+/* visited link */
+a:visited {
+    color: #196019;
+}
+
+/* mouse over link */
+a:hover {
+    color: #3AD83A;
+}
+
+/* selected link */
+a:active {
+    color: #00C100;
+
+}
+
+
+/*nav {
+    float: left;
+    max-width: 160px;
+    margin: 0;
+    padding: 1em;
+    border: 50px black;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul a {
+    text-decoration: none;
+}
+*/
+
+/*
+.ad-left {
+  margin-left: 10%;
+  float: left;
+  width: 30%;
+  margin-top: 2%;
+  border-style: double;
+  padding-left: : 15%;
+}
+
+.ad-right {
+  width:auto;
+  margin-top: 2%;
+  border-style: double;
+  border-color: rgb(34,139,34);
+
+}
+*/

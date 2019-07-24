@@ -1,0 +1,15 @@
+{% extends "blog/index.html" %}
+
+{% block taskdetail %}
+
+{% if task_detail %}
+<div class="container">
+<h3> {{ task_detail.title}} <a href="{% url 'edit_task' task_detail.id  %}">Edit</a></h3>
+<h6> Time passed:  {{time_passed}}</h6>
+</div>
+<br>
+<p>{{ task_detail.body }}</p>
+{% endif %}
+
+
+{% endblock %}

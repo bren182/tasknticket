@@ -1,0 +1,44 @@
+{% extends "blog/base.html" %}
+{% load static %}
+{% block selectedtasks %}
+<img src="{% static "blog/static/images/nav2.jpg" %}" class="nav-image" >
+{% endblock %}
+
+{% block content %}
+<div class="row">
+<div class="container">
+  <div class="col-sm-10 task-detail-header">
+    <h2>Task Details</h2>
+
+  </div>
+  <div class="col-sm-2">
+        <h3><a href="{% url 'new_task'  %}">Add Task <span class="glyphicon glyphicon-plus"></span></h3></a>
+  </div>
+</div>
+</div>
+
+
+<div class="container">
+<div class="row">
+<div class = "col-sm-4 task-nav">
+  <div class="container"><h3>Current:</h3></div>
+  <ul>
+    {% for post in latest_posts %}
+        <li><a href="{% url 'detail' post.id  %}">{{ post.title }}</a></li>
+      {% endfor %}
+   </ul>
+     <div class="container"><h3>Completed:</h3></div>
+     <ul>
+       {% for post in latest_posts_completed %}
+           <li><a href="{% url 'detail' post.id  %}">{{ post.title }}</a></li>
+         {% endfor %}
+      </ul>
+</div>
+<div class="col-sm-8 task-detail">
+  {% block taskdetail %}
+
+  {% endblock %}
+</div>
+</div>
+</div>
+{% endblock %}
