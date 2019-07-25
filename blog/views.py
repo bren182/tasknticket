@@ -40,7 +40,7 @@ def detail(request, id):
 
 
 def blog(request):
-    return HttpResponse('Welcome to the blog!')
+    return render(request, 'blog/blog.html')
 
 def stats(request):
     template = loader.get_template('blog/test.html')
